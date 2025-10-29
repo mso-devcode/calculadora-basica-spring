@@ -21,5 +21,35 @@ public class MathController {
                        @PathVariable String numberTwo) {
         return this.mathService.sum(numberOne, numberTwo);
     }
+
+    @RequestMapping("/subtraction/{numberOne}/{numberTwo}")
+    public Double subtraction (@PathVariable String numberOne,
+                       @PathVariable String numberTwo) {
+        return this.mathService.subtraction(numberOne, numberTwo);
+    }
+
+    @RequestMapping("/multiplication/{numberOne}/{numberTwo}")
+    public Double multiplication (@PathVariable String numberOne,
+                       @PathVariable String numberTwo) {
+        return this.mathService.multiplication(numberOne, numberTwo);
+    }
+
+    @RequestMapping("/division/{numberOne}/{numberTwo}")
+    public Double division (@PathVariable String numberOne,
+                       @PathVariable String numberTwo) {
+        return this.mathService.division(numberOne, numberTwo);
+    }
+
+    @RequestMapping("/average/{numberOne}/{numberTwo}")
+    public Double average (@PathVariable String numberOne,
+                       @PathVariable String numberTwo) {
+        return this.mathService.avarage(numberOne, numberTwo);
+    }
+    
+    @RequestMapping("/sqrtRoot/{number}")
+    public Double sqrtRoot (@PathVariable String number) {
+        return this.mathService.sqrtRoot(number);
+    }
+
     
 }

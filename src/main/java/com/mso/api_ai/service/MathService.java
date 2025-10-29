@@ -14,4 +14,42 @@ public class MathService {
         return ConvertToValidation.convertToDouble(numberOne) + ConvertToValidation.convertToDouble(numberTwo);
     }
     
+     public Double subtraction(String numberOne, String numberTwo) throws IllegalArgumentException {
+        if (!ConvertToValidation.isNumber(numberOne) || !ConvertToValidation.isNumber(numberTwo)){
+                throw new IllegalArgumentException("This value is not a number");
+            }
+        return ConvertToValidation.convertToDouble(numberOne) - ConvertToValidation.convertToDouble(numberTwo);
+    }
+    
+     public Double multiplication(String numberOne, String numberTwo) throws IllegalArgumentException {
+        if (!ConvertToValidation.isNumber(numberOne) || !ConvertToValidation.isNumber(numberTwo)){
+                throw new IllegalArgumentException("This value is not a number");
+            }
+        return ConvertToValidation.convertToDouble(numberOne) * ConvertToValidation.convertToDouble(numberTwo);
+    }
+
+    public Double division(String numberOne, String numberTwo) throws IllegalArgumentException {
+        if (!ConvertToValidation.isNumber(numberOne) || !ConvertToValidation.isNumber(numberTwo)){
+                throw new IllegalArgumentException("This value is not a number");
+            }
+        return ConvertToValidation.convertToDouble(numberOne) / ConvertToValidation.convertToDouble(numberTwo);
+    }
+    
+    public Double avarage(String numberOne, String numberTwo) throws IllegalArgumentException {
+        if (!ConvertToValidation.isNumber(numberOne) || !ConvertToValidation.isNumber(numberTwo)){
+                throw new IllegalArgumentException("This value is not a number");
+            }
+        return (ConvertToValidation.convertToDouble(numberOne) + ConvertToValidation.convertToDouble(numberTwo)) / 2;
+    }
+
+     public Double sqrtRoot(String number) throws IllegalArgumentException {
+        if (!ConvertToValidation.isNumber(number)){
+                throw new IllegalArgumentException("This value is not a number");
+            }
+        return Math.sqrt(ConvertToValidation.convertToDouble(number));
+       }
+    
+    
+    
+
 }
