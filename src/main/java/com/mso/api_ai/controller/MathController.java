@@ -24,7 +24,7 @@ public class MathController {
 
     @RequestMapping("/subtraction/{numberOne}/{numberTwo}")
     public Double subtraction (@PathVariable String numberOne,
-                       @PathVariable String numberTwo) {
+                       @PathVariable String numberTwo) throws Exception{
         return this.mathService.subtraction(numberOne, numberTwo);
     }
 
